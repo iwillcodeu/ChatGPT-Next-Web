@@ -252,7 +252,7 @@ yarn dev
 
 > [简体中文 > 如何部署到私人服务器](./README_CN.md#部署)
 
-### Docker (Recommended)
+### Deploying with Docker
 
 ```shell
 docker pull yidadaa/chatgpt-next-web
