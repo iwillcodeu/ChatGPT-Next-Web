@@ -4,7 +4,7 @@
 
 Fork this project on GitHub, then log in to dash.cloudflare.com and go to Pages.
 
-1. Click "Create a project".
+1. Navigate to dash.cloudflare.com and open Pages.
 2. Choose "Connect to Git".
 3. Connect Cloudflare Pages to your GitHub account.
 4. Select the forked project.

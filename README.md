@@ -102,7 +102,7 @@ One-Click to get well-designed cross-platform ChatGPT web UI.
 
 1. Get [OpenAI API Key](https://platform.openai.com/account/api-keys);
 2. Click
-   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web&env=OPENAI_API_KEY&env=CODE&project-name=chatgpt-next-web&repository-name=ChatGPT-Next-Web), remember that `CODE` is your page password;
+   [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https%3A%2F%2Fgithub.com%2FYidadaa%2FChatGPT-Next-Web), remember that `CODE` is your page password;
 3. Enjoy :)
 
 ## FAQ
@@ -198,7 +198,6 @@ If you do not want users to input their own API key, set this value to 1.
 ### `DISABLE_GPT4` (optional)
 
 > Default: Empty
-
 If you do not want users to use GPT-4, set this value to 1.
 
 ### `ENABLE_BALANCE_QUERY` (optional)
@@ -228,7 +227,7 @@ NodeJS >= 18, Docker >= 20
 
 > [简体中文 > 如何进行二次开发](./README_CN.md#开发)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
+[![Setup Local Development](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/Yidadaa/ChatGPT-Next-Web)
 
 Before starting development, you must create a new `.env.local` file at project root, and place your api key into it:
 
@@ -239,7 +238,7 @@ OPENAI_API_KEY=<your api key here>
 BASE_URL=https://chatgpt1.nextweb.fun/api/proxy
 ```
 
-### Local Development
+### Setting up Local Development Environment
 
 ```shell
 # 1. install nodejs and yarn first
@@ -253,7 +252,7 @@ yarn dev
 
 > [简体中文 > 如何部署到私人服务器](./README_CN.md#部署)
 
-### Docker (Recommended)
+### Deploying with Docker
 
 ```shell
 docker pull yidadaa/chatgpt-next-web
