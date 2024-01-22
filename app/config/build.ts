@@ -30,7 +30,7 @@ export const getBuildConfig = () => {
         commitHash: "unknown",
       };
     }
-  })();
+    });
 
   return {
     version,
