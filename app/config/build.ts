@@ -7,11 +7,10 @@ export const getBuildConfig = () => {
     );
   }
 
-  const buildMode = process.env.BUILD_MODE ?? "standalone";
+  const buildMode = process.env.BUILD_MODE || "standalone";
   const isApp = !!process.env.BUILD_APP;
   const version = "v" + tauriConfig.package.version;
-
-  const commitInfo = (() => {
+  console.log('BUILD_MODE:', process.env.BUILD_MODE);
     try {
       const childProcess = require("child_process");
       const commitDate: string = childProcess
@@ -31,7 +30,7 @@ export const getBuildConfig = () => {
         commitHash: "unknown",
       };
     }
-  })();
+    });
 
   return {
     version,
