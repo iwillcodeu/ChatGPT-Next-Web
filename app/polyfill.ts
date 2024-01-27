@@ -4,7 +4,7 @@ declare global {
   }
 }
 
-if (!Array.prototype.at) {
+if (!Array.prototype.at || !('at' in Array.prototype)) {
   Array.prototype.at = function (index: number) {
     // Get the length of the array
     const length = this.length;

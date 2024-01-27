@@ -8,11 +8,11 @@ export function trimTopic(topic: string) {
 
 export async function copyToClipboard(text: string) {
   try {
-    if (window.__TAURI__) {
-      window.__TAURI__.writeText(text);
-    } else {
-      await navigator.clipboard.writeText(text);
-    }
+  if (window.__TAURI__) {
+    await window.__TAURI__.clipboard.writeText(text);
+  } else {
+    await navigator.clipboard.writeText(text);
+  }
 
     showToast(Locale.Copy.Success);
   } catch (error) {
@@ -66,12 +66,21 @@ export async function downloadAs(text: string, filename: string) {
       "href",
       "data:text/plain;charset=utf-8," + encodeURIComponent(text),
     );
-  element.setAttribute("download", filename);
+    element.setAttribute("download", filename);
 
-  element.style.display = "none";
-  document.body.appendChild(element);
+    element.style.display = "none";
+    document.body.appendChild(element);
 
-  element.click();
+    element.click();
+
+    document.body.removeChild(element);
+  }
+}
+export function readFromFile() {
+  return new Promise<string>((res, rej) => {
+    const fileInput = document.createElement("input");
+    fileInput.type = "file";
+    fileInput.accept = "application/json";
 
   document.body.removeChild(element);
 }
@@ -159,7 +168,7 @@ function getDomContentWidth(dom: HTMLElement) {
 }
 
 function getOrCreateMeasureDom(id: string, init?: (dom: HTMLElement) => void) {
-  let dom = document.getElementById(id);
+  let dom = document.getElementById(id) as HTMLElement | null;
 
   if (!dom) {
     dom = document.createElement("span");

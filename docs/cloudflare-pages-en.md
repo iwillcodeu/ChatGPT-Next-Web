@@ -1,5 +1,9 @@
 # Cloudflare Pages Deployment Guide
 
+## Troubleshooting Cloudflare Pages Deployment
+
+If you encounter issues with Cloudflare Pages deployment, follow these troubleshooting steps:
+
 ## How to create a new project
 
 Fork this project on GitHub, then log in to dash.cloudflare.com and go to Pages.
@@ -8,7 +12,7 @@ Fork this project on GitHub, then log in to dash.cloudflare.com and go to Pages.
 2. Choose "Connect to Git".
 3. Connect Cloudflare Pages to your GitHub account.
 4. Select the forked project.
-5. Click "Begin setup".
+5. Click "Begin setup" and ensure that the project setup process completes without errors.
 6. For "Project name" and "Production branch", use the default values or change them as needed.
 7. In "Build Settings", choose the "Framework presets" option and select "Next.js".
 8. Do not use the default "Build command" due to a node:buffer bug. Instead, use the following command:
@@ -35,9 +39,10 @@ Fork this project on GitHub, then log in to dash.cloudflare.com and go to Pages.
     - `DISABLE_FAST_LINK=1 Optional, disable parse settings from url`
     - `OPENAI_SB=1 Optional，use the third-party OpenAI-SB API`
 
-12. Click "Save and Deploy".
+12. Click "Save and Deploy" and ensure that the deployment process runs without any errors.
 13. Click "Cancel deployment" because you need to fill in Compatibility flags.
 14. Go to "Build settings", "Functions", and find "Compatibility flags".
 15. Fill in "nodejs_compat" for both "Configure Production compatibility flag" and "Configure Preview compatibility flag".
-16. Go to "Deployments" and click "Retry deployment".
-17. Enjoy.
+17. If the deployment fails, verify the build settings and compatibility flags. Check the Cloudflare Pages dashboard for detailed logs and error messages.
+19. If you encounter issues with Cloudflare Pages deployment, consider reaching out to Cloudflare support for additional assistance.
+18. Enjoy.
