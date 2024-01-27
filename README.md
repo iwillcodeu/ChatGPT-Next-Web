@@ -97,6 +97,15 @@ One-Click to get well-designed cross-platform ChatGPT web UI.
 - 🚀 v2.9.11 现在可以使用自定义 Azure 服务了。
 
 ## Get Started
+## Troubleshooting GitHub Actions
+
+If you encounter issues with GitHub Actions, follow these troubleshooting steps:
+1. **Check Workflow Syntax**: Ensure that the YAML syntax is correct by using GitHub's workflow editor or a linter. You can use tools like [GitHub Super Linter](https://github.com/github/super-linter) for linting.
+2. **Environment Variables**: Check if any required environment variables are missing or improperly configured in the repository secrets or workflow files.
+3. **Workflow Errors**: Inspect the GitHub Actions logs for any errors or warnings that could point to the cause of the failure.
+4. **Third-party Actions**: If you are using third-party actions, verify that they are properly referenced and have the correct permissions.
+5. **GitHub Status Dashboard**: Check the GitHub Status Dashboard to see if there are any ongoing issues with GitHub Actions or related services.
+6. **Community Discussions**: Search for related discussions or issues in the GitHub Community to find solutions from other users.
 
 > [简体中文 > 如何开始使用](./README_CN.md#开始使用)
 
