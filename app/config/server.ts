@@ -44,7 +44,7 @@ const ACCESS_CODES = (function getAccessCodes(): Set<string> {
 })();
 
 export const getServerSideConfig = () => {
-  if (typeof process === "undefined") {
+  if (typeof window === "undefined") {
     throw Error(
       "[Server Config] you are importing a nodejs-only module outside of nodejs",
     );
@@ -63,7 +63,7 @@ export const getServerSideConfig = () => {
   const isAzure = !!process.env.AZURE_URL;
 
   return {
-    baseUrl: process.env.BASE_URL,
+    baseUrl: process.env.BASE_URL || "http://localhost:3000",
     apiKey: process.env.OPENAI_API_KEY,
     openaiOrgId: process.env.OPENAI_ORG_ID,
 
