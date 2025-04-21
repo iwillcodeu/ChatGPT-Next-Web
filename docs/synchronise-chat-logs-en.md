@@ -14,7 +14,9 @@
 
     ![Select Server](./images/upstash-3.png)
 
-3. Find the REST API and copy UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN (⚠Important⚠: Do not share your token!)
+3. In your UpStash account, navigate to the database you created and locate the REST API endpoint and the respective authentication token (UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN). Ensure to keep your authentication token private.
+
+    ![Find REST API](./images/find-rest-api.png)
 
    ![Copy](./images/upstash-4.png)
 
@@ -26,6 +28,6 @@
 
     ![Sync Availability Check Completed](./images/upstash-6.png)
 
-5. Success!
+5. After successfully completing this step, you should have copied the UPSTASH_REDIS_REST_URL and UPSTASH_REDIS_REST_TOKEN, allowing you to proceed with the synchronization process.
 
    ![Great job~!](./images/upstash-7.png)
