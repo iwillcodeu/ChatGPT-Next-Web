@@ -215,7 +215,6 @@ Your openai api key, join multiple api keys with comma.
 > Default: `https://api.openai.com`
 
 > Examples: `http://your-openai-proxy.com`
-
 Override openai api request base url.
 
 ### `OPENAI_ORG_ID` (optional)
